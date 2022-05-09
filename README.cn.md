@@ -45,6 +45,12 @@ ngx_http_upstream_server(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 }
 ```
 
+也可以使用linux的patch方式修改ngx_http_upstream.c:
+```sh
+cd /usr/src/openresty-1.19.9.1/bundle/nginx-1.19.9
+patch -Np0 < /path/to/nginx-upstream-dynamic-resolve-servers/patches/nginx-1.19.9-dynamic_resolve_servers.patch
+```
+
 ### 编译
 
 ```sh

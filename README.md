@@ -42,6 +42,12 @@ ngx_http_upstream_server(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 }
 ```
 
+Or we can use linux patch to do this modification:
+```sh
+cd /usr/src/openresty-1.19.9.1/bundle/nginx-1.19.9
+patch -Np0 < /path/to/nginx-upstream-dynamic-resolve-servers/patches/nginx-1.19.9-dynamic_resolve_servers.patch
+```
+
 ### configure and make
 ```sh
 ./configure --add-module=/path/to/nginx-upstream-dynamic-resolve-servers
