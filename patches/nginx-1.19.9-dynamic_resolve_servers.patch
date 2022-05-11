@@ -47,7 +47,7 @@ diff -Naur src/http/ngx_http_upstream.c src/http3/ngx_http_upstream.c
      }
  
 -    us->name = u.url;
-+    us->name = name;
++    us->name = u.host;
      us->addrs = u.addrs;
      us->naddrs = u.naddrs;
      us->weight = weight;
